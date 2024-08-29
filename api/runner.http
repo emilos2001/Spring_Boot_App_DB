@@ -1,0 +1,60 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+### That's doesn't exist with id 3
+GET http://localhost:8080/api/runs/3
+
+### Create run 404
+POST http://localhost:8080/api/runs
+Content-Type: application/json
+
+{
+  "id": 404,
+  "title": "Saturday Morning Runner",
+  "startedOn": "2022-03-10",
+  "completedOn": "2022-03-11",
+  "distance": 6,
+  "Location": "OUTDOOR"
+}
+
+###uptade run 2
+PUT http://localhost:8080/api/runs/447
+Content-Type: application/json
+
+{
+  "id": 404,
+  "title": "Sunday evening",
+  "startedOn": "2021-04-02",
+  "completedOn": "2021-04-03",
+  "distance": "45",
+  "location": "OUTDOOR"
+}
+
+### create run 447
+POST http://localhost:8080/api/runs
+Content-Type: application/json
+
+{
+"id": 447,
+"title": "Saturday Runner",
+"startedOn": "2022-12-20",
+"completedOn": "2023-12-21",
+"distance": 260,
+"Location": "OUTDOOR"
+}
+
+###create runer 3
+POST http://localhost:8080/api/runs
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Sunday evening",
+  "startedOn": "2023-03-23",
+  "completedOn": "2023-03-24",
+  "distance": 40,
+  "location": "INDOOR"
+}
+### delete run
+DELETE http://localhost:8080/api/runs/34
